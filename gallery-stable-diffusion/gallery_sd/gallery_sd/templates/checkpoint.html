@@ -1,0 +1,71 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Checkpoint</title>
+<style>
+  body {
+  margin: 0;
+  }
+
+  .sidenav {
+      height: 100%;
+      width: 160px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #f1f1f1;
+    }
+
+    .sidenav a {
+        padding:8px ;
+        text-decoration:none ;
+        font-size:25px ;
+        color:#818181 ;
+        display:block ;
+    }
+
+    .sidenav a:hover {
+        background-color:#555 ;
+        color:white ;
+    }
+  .image-container {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .image-item {
+      display: flex;
+      flex-direction: column;
+      width:300px;
+      height:300px;
+      background-size: cover;
+      margin-bottom: 20px;
+      margin-right: 4px;
+  }
+
+  .image-item a {
+      display:block;
+      background-color: #87CEFA;
+      text-align: center;
+  }
+</style>
+</head>
+
+<body>
+<h1 style="text-align: center;">Pictures of {{pic_n.cp}}</h1>
+<div class="sidenav">
+  <a href="/parsing/">Parsing</a>
+  <a href="/gallery/">Gallery</a>
+</div>
+{% if pic_n %}
+  <div style="display: table; margin: 30px auto; width: 65%;">
+    <div class="image-container">
+    {% for item in pic_n.pic_names %}
+      <div class="image-item" style="background-image: url(../static/data/Checkpoint/{{pic_n.cp}}/{{item}})">
+        <a href="/picture/?pic={{item}}">{{item}}</a>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+{% endif %}
+</body>
