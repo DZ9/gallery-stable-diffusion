@@ -21,8 +21,8 @@ Before using, please install browser_cookie3 with command 'pip3 install browser_
 Only tested on Windows.
 
 **To do:**
-1. Record picture information url in database also, in case parsing the same page twice.
-2. Add search on the Gallery page.
+1. Record picture url in database also, in case parsing the same page twice.
+2. Collect tag information.
 
 **Note:**
 This tool is created for stable-diffusion webui learning, do NOT use illegal.
